@@ -3,9 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Discord Joiner</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #f33;
+      font-family: 'Arial', sans-serif;
+      padding: 30px;
+    }
+    h2 {
+      color: #f44;
+    }
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+    input, textarea, button {
+      background-color: #222;
+      color: #f33;
+      border: 1px solid #f33;
+      padding: 8px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    button {
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #f33;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-  <a href="https://x-soviet.github.io/HRVX-Raider/" class="top-left-link">別ページへ</a>
+  <a href="https://x-soviet.github.io/HRVX-Raider/" class="top-left-link">Raider</a>
 
 <style>
 .top-left-link {
@@ -22,15 +59,16 @@
 }
 </style>
 
-  <h2>Discord サーバー自動参加
+  <h2> Discord HRVXjoiner</h2>
   <form action="/join" method="post">
-    <label>ユーザートークン:<br>
-      <input type="text" name="token" style="width: 400px;">
-    </label><br><br>
-    <label>招待コード（例: `abc123`）:<br>
+    <label>ユーザートークン（改行区切りで複数入力可）:<br>
+      <textarea name="token" placeholder="トークン1&#10;トークン2&#10;..."></textarea>
+    </label>
+    <label>招待リンク:<br>
       <input type="text" name="invite_code">
-    </label><br><br>
+    </label>
     <button type="submit">サーバーに参加</button>
   </form>
 </body>
 </html>
+
