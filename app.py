@@ -3,10 +3,10 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/')
-def form():
-    with open('form.html', 'r', encoding='utf-8') as f:
-        return render_template_string(f.read())
+@app.route('/join', methods=['POST'])
+def join():
+    # POSTのみ受け付ける処理
+    pass
 
 @app.route('/join', methods=['POST'])
 def join():
