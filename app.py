@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/join', methods=['POST'])
 def join():
-    # POSTのみ受け付ける処理
-    pass
+    ...
+
 
 @app.route('/join', methods=['POST'])
 def join():
